@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css02_selector표현식.html</title>
+<style type="text/css">
+h1 {
+	width: 450px;
+	font-size: 15px;
+}
+
+p {
+	width: 430px;
+	background-color: rgb(240, 240, 250);
+}
+
+#container1 strong {
+	color: rgb(20, 20, 120);
+}
+
+#a {
+	font-size: 18px;
+}
+
+#container1 .c {
+	color: rgb(0, 0, 50);
+}
+
+#container1 .c>span {
+	background-color: rgb(255, 220, 230);
+}
+
+#container1 span, #container1 b, #container1 i {
+	color: red;
+}
+
+#container1 h1+p {
+	background-color: rgb(255, 240, 250);
+}
+
+#container1 .c+p>span {
+	background-color: rgb(220, 220, 250);
+}
+
+#container1 h1 ~ p {
+	padding: 10px;
+}
+
+/* 전체선택자 */
+* {
+	margin: 5px;
+	font-family: '굴림';
+}
+
+/* 속성선택자 */
+#container1 span[title] {
+	font-weight: 900px;
+	font-size: 18px;
+}
+
+#container1 span[title="피해유형"] {
+	font-weight: 600px;
+}
+
+/* 다중선택자 */
+#container1 #container1 a:link {
+	color: black;
+}
+
+#container1 a:visited {
+	color: green;
+}
+
+#container1 a:active {
+	color: yellow;
+	font-size: 50px;
+}
+
+#container1 a:hover {
+	background-color: aqua;
+}
+
+#container1 p:hover {
+	background-color: pink;
+}
+
+#container2 p:first-letter {
+	font-size: 25px;
+}
+
+#container2 p:first-line {
+	font-size: 20px;
+}
+
+#container2 h1:first-child {
+	background-color: yellow;
+}
+
+#container2 p:after {
+	content: "👍👍👍";
+	color: red;
+}
+
+#container2 p span {
+	color: red;
+}
+</style>
+</head>
+<body>
+	<div id="container1">
+		<h1>
+			<strong id="a">"공짜폰이라더니 전액 할부 청구"</strong>…올 상반기 <strong>통신분쟁
+				31%↑</strong>
+		</h1>
+		<p class="c">
+			올 상반기 통신분쟁 조정 신청건수가 1년전과 비교해 31% 증가한 것으로 조사됐다. 특히 <span>단말기값을
+				거짓으로 고지</span>하거나 <span>명의를 도용</span>해 통신서비스가 무단 개통되는 피해가 끊이지 않고 있다.
+		</p>
+		<p>
+			<span>방송통신위원회(방통위)</span>는 올해 상반기(2024년 1월1일~7월31일)까지 <i>통신분쟁조정위원회</i>에
+			신청된 분쟁조정 사건 871건을 분석해 다수의 피해가 예상돼 이용자 주의가 필요한 <b>통신분쟁 빈발사례</b>를 선정해
+			14일 발표했다.
+		</p>
+		<p class="c">
+			<a href="https://kcc.go.kr/user.do">방통위</a>에 따르면 ▲단말기값을 거짓으로 고지해 휴대전화
+			개통 유도(191건) ▲명의도용으로 인한 통신서비스 무단 개통(91건) ▲스미싱 피해(34건) ▲인터넷서비스 해지 미흡으로
+			인한 이중 과금(26건) ▲유선서비스 부당 계약(50건) 등과 관련된 분쟁이 <span title="피해유형">올
+				상반기 주요 빈발 피해유형</span>으로 집계됐다.
+		</p>
+	</div>
+	<div id="container2">
+		<h1>
+			<strong id="a">"공짜폰이라더니 전액 할부 청구"</strong>…올 상반기 <strong>통신분쟁
+				31%↑</strong>
+		</h1>
+		<p class="c">
+			올 상반기 통신분쟁 조정 신청건수가 1년전과 비교해 31% 증가한 것으로 조사됐다. 특히 <span>단말기값을
+				거짓으로 고지</span>하거나 <span>명의를 도용</span>해 통신서비스가 무단 개통되는 피해가 끊이지 않고 있다.
+		</p>
+		<p>
+			<span>방송통신위원회(방통위)</span>는 올해 상반기(2024년 1월1일~7월31일)까지 <i>통신분쟁조정위원회</i>에
+			신청된 분쟁조정 사건 871건을 분석해 다수의 피해가 예상돼 이용자 주의가 필요한 <b>통신분쟁 빈발사례</b>를 선정해
+			14일 발표했다.
+		</p>
+		<p class="c">
+			<a href="https://kcc.go.kr/user.do">방통위</a>에 따르면 ▲단말기값을 거짓으로 고지해 휴대전화
+			개통 유도(191건) ▲명의도용으로 인한 통신서비스 무단 개통(91건) ▲스미싱 피해(34건) ▲인터넷서비스 해지 미흡으로
+			인한 이중 과금(26건) ▲유선서비스 부당 계약(50건) 등과 관련된 분쟁이 <span title="피해유형">올
+				상반기 주요 빈발 피해유형</span>으로 집계됐다.
+		</p>
+	</div>
+</body>
+</html>

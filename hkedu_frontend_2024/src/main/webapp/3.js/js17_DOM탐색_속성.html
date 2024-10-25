@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function searchPar() {
+		var child02 = document.getElementsByTagName("p")[1];
+		console.log(child02.nodeName);
+		console.log(child02.tagName);
+		
+		var divNode = child02.parentNode;
+		console.log(divNode.nodeName);
+		
+		var divEle=child02.parentElement;
+		console.log(divEle.nodeName);
+		
+		divEle.style.backgroundColor="yellow";
+	}
+	function searchChi() {
+		var div = document.querySelectorAll("div")[0];
+		
+		var divChildNodes=div.childNodes;
+		console.log(divChildNodes);
+		
+		var divChildElements=div.children;
+		console.log(divChildElements);
+		
+		divChildElements[0].style.color="red";
+		divChildElements[1].textContent="CHILD02";
+	}
+	function first_LastChi() {
+		var div=document.querySelectorAll("div")[0];
+		var firstChi=div.firstChild;
+		var firstChiEle=div.firstElementChild;
+		console.log(firstChi.nodeName+","+firstChiEle.nodeName);
+		
+		var lastChi=div.lastChild;
+		var lastChiEle=div.lastElementChild;
+		console.log(lastChi.nodeName+","+lastChiEle.textContent);
+	}
+	function siblingtest() {
+		var child02=document.getElementsByTagName("p")[1];
+		
+		var pref=child02.previousSibling;
+		var nextP=child02.nextSibling;
+		console.log(pref.nodeName+":"+nextP.nodeName);
+		
+		var prePEle=child02.previousElementSibling;
+		var nextPEle=child02.nextElementSibling;
+		console.log(prePEle.textContent+":"+nextPEle.textContent);
+		
+	}
+</script>
+</head>
+<body>
+	<div>
+		<p>child01</p>
+		<p>child02</p>
+		<p>child03</p>
+	</div>
+	<button onclick="searchPar()">부모탐색</button>
+	<button onclick="searchChi()">자식탐색</button>
+	<button onclick="first_LastChi()">자식탐색2</button>
+	<button onclick="siblingtest()">자식탐색3</button>
+</body>
+</html>

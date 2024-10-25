@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+*{
+	
+	margin: 0px;
+	margin-bottom: 20px;
+	padding:0px;
+}
+
+body{
+	background-color: rgb(255,240,240);
+}
+
+button{
+/* 	border: 1px solid cornflowerblue; */
+	background-color:rgb(250,220,220);
+	border-radius:5px;
+	width:300px;
+	height: 40px;
+	color:rbg(20,20,20);
+	font-weight: bold;	
+}
+
+form{
+	width: 300px;
+	margin: 10% auto;
+}
+
+input, button{
+	margin:2px;
+}
+
+input[name]{
+	border:0px;
+	width:288px;
+	height: 40px;
+	border-radius: 5px;
+	padding-left: 10px;
+}

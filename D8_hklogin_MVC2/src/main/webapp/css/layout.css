@@ -1,0 +1,88 @@
+
+@charset "UTF-8";
+
+*{
+	margin:0px;
+	padding:0px;
+}
+
+#navbar{
+	background-color: rgb(255,240,240);
+	height: 60px;
+}
+
+.navbar ul{
+	width:800px ;
+	margin-left:100px;
+}
+
+.navbar li{
+	display: inline-block ;
+	margin-top:15px;
+	font-size: 20px;
+	color:rgb(20,20,20);
+	margin-left:15px;
+}
+
+.navbar a{
+	color:rgb(20,20,20);
+	text-decoration: none;
+}
+
+.footer{
+	position: absolute;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	text-align: center;
+	color:rgb(20,20,20);
+	background-color: rgb(255,240,240);
+	line-height: 50px;
+	height: 50px;
+}
+
+form{
+	width:440px;
+	margin:5% auto;
+	/* background-color: honeydew; */
+	padding: 20px;
+}
+
+input{
+	border:1px solid rgb(192,192,192);
+	width: 420px;
+	height: 40px;
+	border-radius: 5px;
+	padding-left: 10px ;
+}
+
+input,button{
+	margin:4px;
+}
+
+button{
+/* 	border: 1px solid cornflowerblue; */
+	background-color: rgb(250,220,220);
+	border-radius:5px;
+	width:150px;
+	height: 40px;
+	color:rbg(20,20,20);
+	font-weight: bold;	
+	margin-left:44px;
+}
+
+form > a{
+	text-decoration: none;
+}
+
+fieldset > #sample6_postcode,fieldset > input[type=button]{
+	width:380px;
+}
+
+fieldset > #sample6_detailAddress,fieldset > #sample6_extraAddress{
+	width:375px;
+}
+fieldset{
+	margin:10px auto;
+	border-radius: 5px;
+}

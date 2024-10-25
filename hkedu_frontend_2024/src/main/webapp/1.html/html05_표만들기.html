@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html05_표 만들기</title>
+<style type="text/css">
+table {
+	border-collapse: collapse;
+} /* 실선 */
+.tb {
+	width: 600px
+}
+.table {
+	display:table;
+} /* div 요소를 table 태그처럼 보이게 설정 */
+.tr {
+	display: table-row;
+}
+.td {
+	display: table-cell;
+	border: 1px solid black;
+	width: 100px;
+}
+/* mobile 화면일 경우 */
+@media screen and (max-width:600px) {
+	.table {
+		display: block;
+	} /* div 요소를 table 태그처럼 보이게 설정 */
+	.tr {
+		display: block;
+	}
+	.td {
+		display: block;
+		border: 1px solid black;
+		width: 100px;
+	}
+}
+</style>
+</head>
+<body>
+	<p>
+		<strong>표 만들기</strong>
+	</p>
+	<table border="1" class="tb">
+		<tr>
+			<th>번호</th>
+			<th>제목</th>
+			<th>작성일</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>title</td>
+			<td>20240811</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>title</td>
+			<td>20240812</td>
+		</tr>
+	</table>
+	<p>
+		<strong>표 만들기 2</strong>
+	</p>
+	<table border="1" class="tb">
+		<caption>표의 제목</caption>
+		<col width="100px" />
+		<col width="300px" />
+		<col width="200px" />
+		<thead>
+			<tr>
+				<th>번호</th>
+				<th>제목</th>
+				<th>작성일</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>title</td>
+				<td>20240811</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>title</td>
+				<td>20240812</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3">바닥글 영역</td>
+			</tr>
+		</tfoot>
+	</table>
+
+	<p>
+		<strong>표 만들기 3</strong>
+	</p>
+	<table border="1" class="tb">
+		<tr>
+			<td rowspan="3">1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td colspan="2">2</td>
+		</tr>
+	</table>
+
+
+	<h1>표 안에 표</h1>
+	<table border="1">
+		<tr>
+		
+			<td>
+				<table border="1">
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+			
+			<td>
+				<table border="1">
+					<tr>
+						<td>
+							<table border="1">
+								<tr>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table border="1">
+								<tr>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				
+			</td>
+			
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table border="1">
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<p/>
+	<table border="1">
+		<tr>
+			<td rowspan="3"></td> <td></td><td></td>
+		</tr>
+		<tr>
+			<td rowspan="2"></td><td></td>
+		</tr>
+		<tr>
+			<td></td>
+		</tr>
+	</table>
+	<p/>
+	<table>
+		<tr>
+			<td>
+				<table border="1">
+					<tr><td style="width: 30px"></td></tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table border="1">
+					<tr><td style="width: 15px"></td><td style="width: 15px"></td></tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table border="1">
+					<tr><td style="width: 10px"></td> <td style="width: 10px"></td> <td style="width: 10px"></td></tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	
+	<h1>div 태그로 표 만들기</h1>
+	<div class="table">
+		<div class="tr">
+			<div class="td">1</div>
+			<div class="td">2</div>
+			<div class="td">3</div>
+		</div>
+		<div class="tr">
+			<div class="td">1</div>
+			<div class="td">2</div>
+			<div class="td">3</div>
+		</div>
+		<div class="tr">
+			<div class="td">1</div>
+			<div class="td">2</div>
+			<div class="td">3</div>
+		</div>
+	</div>
+</body>
+</html>

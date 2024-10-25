@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html03_이미지요소.html</title>
+</head>
+<body>
+	<h1>이미지요소</h1>
+	<p>이미지요소는 이미지를 웹페이지에 표현할 때 사용한다.</p>
+	<p>사이즈 조절을 할 때 해상도를 고려해야 한다.</p>
+	
+	<p>
+		<img alt="치이카와" height = "150px"
+			src="https://item.kakaocdn.net/do/0c2c793a43a9a1d58756353e8b82f0ad617ea012db208c18f6e83b1a90a7baa7" />
+		<a target="_blank" href="https://www.google.co.kr/">
+			<img alt="치이카와" src="img/치이카와.png" height="100px" />
+		</a>
+	</p>
+	
+	<h1>이미지 맵 사용하기</h1>
+	<img usemap="#menu" src="img/menu.jpg" alt="음식메뉴입니다." height="400px"/>
+	<map name="menu">
+		<area alt="쌀국수입니다."
+			href="https://www.costco.co.kr/medias/sys_master/images/h21/hff/135176542158878.jpg"
+			shape="rect" coords="44,76,132,160" target="_blank" />
+	</map>
+	
+	<hr/>
+	
+	<a target = "tt" href="html01_구성요소.html">이동</a>
+	<p/>
+	<iframe name = "tt" src="html02_블록요소와인라인요소.html"
+			style="width:400px;height:400px;"></iframe>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#red, #yellow, #blue, #black {
+	width: 100px;
+	height: 100px;
+	border: 1px solid gray;
+	color: gray;
+	text-align: center;
+	line-height: 100px;
+	position: absolute;
+}
+
+#yellow {
+	left: 110px;
+}
+
+#blue {
+	top: 110px;
+}
+
+#black {
+	left: 110px;
+	top: 110px;
+}
+
+#base {
+	position: absolute;
+	top: 220px;
+}
+</style>
+<script type="text/javascript">
+function allSel(chkAllObj) {
+	console.log(chkAllObj.checked);
+	
+	var chks = document.getElementsByName("chk");
+	chks.forEach((chk)=> {
+		chk.checked=chkAllObj.checked;
+	});
+}
+function sel() {
+	var chks = document.getElementsByName("chk");
+	chks.forEach((chk)=> {
+		if(chk.checked) {
+			document.getElementById(chk.value).style.backgroundColor=chk.value;
+		} else {
+			document.getElementById(chk.value).style.backgroundColor="white";
+		}
+	});
+}
+function onesel(chkObj) {
+	console.log(chkObj.value);
+	var chks = document.getElementsByName("all")[0];
+	if(chkObj.checked == false) chks.checked = false;
+}
+function clearDiv() {
+/* 	var chks = document.getElementsByName("chk");
+	chks.forEach((chk)=> {
+		chk.checked="false";
+		document.getElementById(chk.value).style.backgroundColor="white";
+	});
+	document.getElementsByName("all").checked="false";
+	var divs=document.getElementsByTagName("div");
+	divs.forEach(()=> {
+		div.style.backgroundColor="white"
+	}) */
+	
+	
+	var divs=document.getElementsByTagName("div");
+	for (var i=0;i<divs.length;i++) {
+		divs[i].style.backgroundColor="white";
+	}
+	document.forms[0].reset();
+}
+</script>
+</head>
+<body>
+	<div id="red">red</div>
+	<div id="yellow">yellow</div>
+	<div id="blue">blue</div>
+	<div id="black">black</div>
+	<div id="base">
+		<form>
+			<input type="checkbox" name="all" onclick="allSel(this)" />전체선택<br />
+			<input type="checkbox" name="chk" value="red" onclick="onesel(this)"/>RED<br />
+			<input type="checkbox" name="chk" value="yellow" onclick="onesel(this)"/>YELLOW<br />
+			<input type="checkbox" name="chk" value="blue" onclick="onesel(this)"/>BLUE<br />
+			<input type="checkbox" name="chk" value="black" onclick="onesel(this)"/>BLACK<br />
+		</form>
+	<button onclick="sel()">선택</button>
+	<button onclick="clearDiv()">초기화</button>
+	</div>
+</body>
+</html>
